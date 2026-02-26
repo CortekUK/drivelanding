@@ -45,7 +45,7 @@ function DashboardPreview() {
 
 export function Hero() {
   return (
-    <AuroraBackground className="pb-6 pt-12 sm:pb-8 sm:pt-16 lg:pb-12 lg:pt-20">
+    <AuroraBackground className="pb-4 pt-12 sm:pb-6 sm:pt-16 lg:pt-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left — copy */}
@@ -54,7 +54,7 @@ export function Hero() {
               Built for established US rental operators
             </p>
 
-            <h1 className="mt-6 text-4xl font-extrabold tracking-tight leading-[1.05] text-foreground sm:text-5xl sm:leading-[1.05] lg:text-[3.5rem] lg:leading-[1.02]">
+            <h1 className="mt-6 text-4xl font-extrabold tracking-tighter leading-[1.05] text-foreground sm:text-5xl sm:leading-[1.05] lg:text-[3.5rem] lg:leading-[1.02]">
               Own your bookings.
               <br />
               <span className="bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">
@@ -63,16 +63,15 @@ export function Hero() {
             </h1>
 
             <p className="mt-8 text-[15px] leading-relaxed text-muted-foreground lg:max-w-[21rem]">
-              Drive247 gives independent rental operators everything needed
-              to run direct — website, admin, renter portal, payments, and
-              optional marketing support — all under your brand.
+              Everything you need to run direct — website, dashboard, renter
+              portal and payments — under your brand.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button
                 asChild
                 size="lg"
-                className="bg-indigo-600 text-sm font-medium shadow-lg shadow-indigo-600/25 transition-all hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-600/30"
+                className="bg-indigo-600 text-sm font-normal shadow-lg shadow-indigo-600/25 transition-all hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-600/30"
               >
                 <a
                   href={CALENDLY_URL}
@@ -86,7 +85,7 @@ export function Hero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-sm font-medium"
+                className="text-sm font-normal"
                 asChild
               >
                 <a href="#features">See the platform</a>
@@ -105,6 +104,10 @@ export function Hero() {
                 )
               )}
             </div>
+
+            <p className="mt-4 text-xs text-muted-foreground/60">
+              Built for established US rental operators (5–50 vehicle fleets).
+            </p>
           </div>
 
           {/* Right — product mockup */}

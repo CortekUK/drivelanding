@@ -128,6 +128,18 @@
   }
 }
 
+@layer utilities {
+  .fade-in-hidden {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  .fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 600ms ease-out, transform 600ms ease-out;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

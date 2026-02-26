@@ -63,7 +63,7 @@ export const TIMELINE_STEPS = [
   },
   {
     time: "~1 week",
-    title: "Go live",
+    title: "Go live and take bookings",
     description:
       "Payments, documents and verification are connected. You begin taking direct bookings.",
   },

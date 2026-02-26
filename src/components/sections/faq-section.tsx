@@ -7,10 +7,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FAQ_ITEMS } from "@/lib/constants";
+import { useFadeIn } from "@/hooks/use-fade-in";
 
 export function FAQSection() {
+  const { ref, visible } = useFadeIn();
+
   return (
-    <section id="faq" className="py-24 sm:py-32">
+    <section id="faq" className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-center justify-center gap-4">
           <div className="h-px w-12 bg-border" />
@@ -20,24 +23,27 @@ export function FAQSection() {
           <div className="h-px w-12 bg-border" />
         </div>
 
-        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight sm:text-4xl lg:text-[44px] lg:leading-tight">
+        <h2 className="mt-5 text-center text-3xl font-bold tracking-tighter sm:text-4xl lg:text-[44px] lg:leading-tight">
           Frequently asked{" "}
           <span className="text-indigo-600 dark:text-indigo-400">
             questions
           </span>
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
+        <p className="mx-auto mt-3 max-w-xl text-center leading-relaxed text-muted-foreground">
           Clear answers for operators moving beyond marketplaces.
         </p>
 
-        <div className="mx-auto mt-16 max-w-3xl">
-          <Accordion type="single" collapsible>
+        <div
+          ref={ref}
+          className={`mx-auto mt-12 max-w-3xl ${visible ? "fade-in-visible" : "fade-in-hidden"}`}
+        >
+          <Accordion type="single" collapsible className="space-y-0">
             {FAQ_ITEMS.map((item, i) => (
-              <AccordionItem key={i} value={`faq-${i}`}>
-                <AccordionTrigger className="text-left text-base font-semibold">
+              <AccordionItem key={i} value={`faq-${i}`} className="py-1">
+                <AccordionTrigger className="text-left text-[15px] font-bold tracking-tight py-3">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                <AccordionContent className="text-sm leading-relaxed text-muted-foreground pb-3">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>

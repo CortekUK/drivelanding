@@ -33,7 +33,7 @@ export function Header() {
           <Button
             asChild
             size="sm"
-            className="bg-indigo-600 px-5 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
+            className="bg-indigo-600 px-5 text-sm font-normal text-white shadow-sm hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
           >
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
               Book a strategy call
@@ -71,7 +71,7 @@ export function Header() {
           <Button
             asChild
             size="sm"
-            className="mt-3 w-full bg-indigo-600 text-sm font-medium text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
+            className="mt-3 w-full bg-indigo-600 text-sm font-normal text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
           >
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
               Book a strategy call

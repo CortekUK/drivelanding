@@ -27,7 +27,7 @@ export function ConsultationForm() {
   }
 
   return (
-    <form action={formAction} className="space-y-4">
+    <form action={formAction} className="space-y-3.5">
       <div>
         <label
           htmlFor="name"
@@ -42,7 +42,7 @@ export function ConsultationForm() {
           placeholder="John Smith"
           required
           disabled={isPending}
-          className="h-11"
+          className="h-10"
         />
       </div>
 
@@ -60,7 +60,7 @@ export function ConsultationForm() {
           placeholder="john@example.com"
           required
           disabled={isPending}
-          className="h-11"
+          className="h-10"
         />
       </div>
 
@@ -79,7 +79,7 @@ export function ConsultationForm() {
           placeholder="Your business name"
           required
           disabled={isPending}
-          className="h-11"
+          className="h-10"
         />
       </div>
 
@@ -94,7 +94,7 @@ export function ConsultationForm() {
           id="message"
           name="message"
           placeholder="Tell us about your fleet and what you'd like to discuss..."
-          rows={4}
+          rows={3}
           disabled={isPending}
           className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex w-full rounded-md border px-3 py-2 text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
         />
@@ -107,10 +107,14 @@ export function ConsultationForm() {
       <Button
         type="submit"
         disabled={isPending}
-        className="h-11 w-full bg-indigo-600 text-sm font-medium text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
+        className="h-11 w-full bg-indigo-600 text-sm font-semibold text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
       >
-        {isPending ? "Sending..." : "Book my strategy call"}
+        {isPending ? "Sending..." : "Request a strategy review"}
       </Button>
+
+      <p className="text-center text-xs text-muted-foreground">
+        We&apos;ll review your fleet and outline your direct channel strategy within 24 hours.
+      </p>
     </form>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   MessageCircle,
   CalendarPlus,
@@ -6,6 +8,7 @@ import {
   CreditCard,
   Smartphone,
 } from "lucide-react";
+import { useFadeIn } from "@/hooks/use-fade-in";
 
 const LEFT_FEATURES = [
   {
@@ -83,8 +86,10 @@ function FeatureItem({
 }
 
 export function RenterPortal() {
+  const { ref, visible } = useFadeIn();
+
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section heading */}
         <div className="flex items-center justify-center gap-4">
@@ -95,23 +100,26 @@ export function RenterPortal() {
           <div className="h-px w-12 bg-border" />
         </div>
 
-        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight sm:text-4xl lg:text-[44px] lg:leading-tight">
+        <h2 className="mt-5 text-center text-3xl font-bold tracking-tighter sm:text-4xl lg:text-[44px] lg:leading-tight">
           Give renters a seamless{" "}
           <span className="text-indigo-600 dark:text-indigo-400">
             self-service experience
           </span>
         </h2>
 
-        <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
+        <p className="mx-auto mt-3 max-w-xl text-center leading-relaxed text-muted-foreground">
           Everything renters need — no app required.
           <br />
           Accessible instantly from any device.
         </p>
 
         {/* Three-column: features | phone | features */}
-        <div className="mt-16 grid items-center gap-10 lg:grid-cols-[1fr_auto_1fr]">
+        <div
+          ref={ref}
+          className={`mt-16 grid items-center gap-10 xl:grid-cols-[1fr_auto_1fr] ${visible ? "fade-in-visible" : "fade-in-hidden"}`}
+        >
           {/* Left features */}
-          <div className="hidden space-y-10 lg:block">
+          <div className="hidden space-y-10 xl:block">
             {LEFT_FEATURES.map((f) => (
               <FeatureItem key={f.title} {...f} align="left" />
             ))}
@@ -135,14 +143,14 @@ export function RenterPortal() {
           </div>
 
           {/* Right features */}
-          <div className="hidden space-y-10 lg:block">
+          <div className="hidden space-y-10 xl:block">
             {RIGHT_FEATURES.map((f) => (
               <FeatureItem key={f.title} {...f} align="right" />
             ))}
           </div>
 
           {/* Mobile: all features in a grid below the phone */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:hidden">
+          <div className="grid gap-6 sm:grid-cols-2 xl:hidden">
             {[...LEFT_FEATURES, ...RIGHT_FEATURES].map((f) => (
               <FeatureItem key={f.title} {...f} align="right" />
             ))}

@@ -1,4 +1,7 @@
+"use client";
+
 import { Globe, CheckCircle2 } from "lucide-react";
+import { useFadeIn } from "@/hooks/use-fade-in";
 
 const BULLETS = [
   "Your domain and branding",
@@ -8,8 +11,10 @@ const BULLETS = [
 ];
 
 export function BookingWebsite() {
+  const { ref, visible } = useFadeIn();
+
   return (
-    <section className="bg-muted/50 py-24 sm:py-32">
+    <section className="bg-muted/50 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section heading */}
         <div className="flex items-center justify-center gap-4">
@@ -20,26 +25,29 @@ export function BookingWebsite() {
           <div className="h-px w-12 bg-border" />
         </div>
 
-        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight sm:text-4xl lg:text-[44px] lg:leading-tight">
+        <h2 className="mt-5 text-center text-3xl font-bold tracking-tighter sm:text-4xl lg:text-[44px] lg:leading-tight">
           Own your direct{" "}
           <span className="text-indigo-600 dark:text-indigo-400">
             booking channel
           </span>
         </h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
+        <p className="mx-auto mt-3 max-w-2xl text-center leading-relaxed text-muted-foreground">
           A fully branded website where customers book directly — connected in
           real time to your operations dashboard.
         </p>
 
         {/* Content row */}
-        <div className="relative mt-16 overflow-hidden rounded-2xl border bg-card shadow-sm">
+        <div
+          ref={ref}
+          className={`relative mt-16 overflow-hidden rounded-2xl border bg-card shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${visible ? "fade-in-visible" : "fade-in-hidden"}`}
+        >
           {/* Top accent line */}
           <div className="absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-indigo-600/20 to-transparent" />
 
-          <div className="grid items-center lg:grid-cols-2">
+          <div className="grid items-center lg:grid-cols-5">
             {/* Browser mockup with video */}
-            <div className="p-6 pb-0 lg:p-8 lg:pb-8">
+            <div className="p-6 pb-0 lg:col-span-3 lg:p-8 lg:pb-8">
               <div className="overflow-hidden rounded-xl border border-border/50 bg-muted/30 shadow-lg">
                 <div className="flex items-center gap-2 border-b bg-muted/60 px-4 py-3">
                   <div className="flex gap-1.5">
@@ -61,7 +69,7 @@ export function BookingWebsite() {
             </div>
 
             {/* Text content */}
-            <div className="p-6 lg:p-8">
+            <div className="p-6 lg:col-span-2 lg:p-8">
               <p className="text-muted-foreground leading-relaxed">
                 Your website. Your pricing. Your rules.
               </p>

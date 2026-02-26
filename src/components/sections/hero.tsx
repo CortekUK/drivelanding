@@ -18,7 +18,7 @@ function DashboardPreview() {
             priority
           />
         </div>
-        <div className="-mt-12 ml-8 mr-8 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 sm:-mt-20 sm:ml-10 sm:mr-10">
+        <div className="-mt-12 ml-8 mr-8 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 opacity-90 sm:-mt-20 sm:ml-10 sm:mr-10">
           <Image
             src="/renter-portal-preview.png"
             alt="Drive247 renter portal showing bookings, payments, ID verification, and messaging"
@@ -27,7 +27,7 @@ function DashboardPreview() {
             className="w-full"
           />
         </div>
-        <div className="-mt-12 ml-16 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 sm:-mt-20 sm:ml-20">
+        <div className="-mt-12 ml-16 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 opacity-85 sm:-mt-20 sm:ml-20">
           <Image
             src="/booking-preview.png"
             alt="Drive247 branded booking flow showing trip details, vehicle selection, and insurance steps"
@@ -54,21 +54,21 @@ export function Hero() {
               Built for established US rental operators
             </p>
 
-            <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
+            <h1 className="mt-6 text-4xl font-extrabold tracking-tight leading-[1.05] text-foreground sm:text-5xl sm:leading-[1.05] lg:text-[3.5rem] lg:leading-[1.02]">
               Own your bookings.
               <br />
               <span className="bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">
-                Control your operation.
+                Grow beyond marketplaces.
               </span>
             </h1>
 
-            <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground lg:max-w-sm">
-              Booking site, ops dashboard, and renter portal&mdash;one
-              platform. Typical go-live ~1 week depending on insurance/ID
-              setup. You own the customer relationship.
+            <p className="mt-8 text-[15px] leading-relaxed text-muted-foreground lg:max-w-[21rem]">
+              Drive247 gives independent rental operators everything needed
+              to run direct — website, admin, renter portal, payments, and
+              optional marketing support — all under your brand.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button
                 asChild
                 size="lg"
@@ -79,7 +79,7 @@ export function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Book a Demo
+                  Book a strategy call
                   <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
                 </a>
               </Button>
@@ -89,7 +89,7 @@ export function Hero() {
                 className="text-sm font-medium"
                 asChild
               >
-                <a href="#features">See How It Works</a>
+                <a href="#features">See the platform</a>
               </Button>
             </div>
 
@@ -98,7 +98,7 @@ export function Hero() {
                 (item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-indigo-200/60 bg-indigo-50/50 px-3 py-1 text-xs font-medium text-indigo-600/80 dark:border-indigo-800/40 dark:bg-indigo-950/40 dark:text-indigo-400/80"
+                    className="rounded-full border border-indigo-200/40 bg-indigo-50/30 px-3 py-1 text-xs font-medium text-indigo-600/50 dark:border-indigo-800/25 dark:bg-indigo-950/25 dark:text-indigo-400/50"
                   >
                     {item}
                   </span>

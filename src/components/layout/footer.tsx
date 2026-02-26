@@ -1,44 +1,119 @@
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
+import { CALENDLY_URL } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-muted/40">
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-        <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-          <div>
-            <Link href="/" className="text-lg font-bold tracking-tight">
-              Drive<span className="text-indigo-600 dark:text-indigo-400">247</span>
+    <footer className="border-t border-border/40">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Link href="/" className="text-xl font-bold tracking-tight">
+              Drive
+              <span className="text-indigo-600 dark:text-indigo-400">247</span>
             </Link>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-3 max-w-xs text-sm text-muted-foreground leading-relaxed">
               Direct booking platform for independent rental operators.
             </p>
           </div>
 
-          <nav className="flex gap-6 text-sm text-muted-foreground">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">
-              Privacy
-            </Link>
-            <Link href="/terms" className="hover:text-foreground transition-colors">
-              Terms
-            </Link>
-            <Link href="/security" className="hover:text-foreground transition-colors">
-              Security
-            </Link>
-          </nav>
+          {/* Platform */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Platform
+            </h4>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <a
+                  href="#features"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Features
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#timeline"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  How it works
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#faq"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Legal
+            </h4>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Terms
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/security"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Security
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Get Started
+            </h4>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-indigo-600 transition-colors hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+                >
+                  Book a strategy call
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <Separator className="my-6" />
-
-        <div className="flex flex-col items-center justify-between gap-2 text-xs text-muted-foreground sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Cortek. All rights reserved.</p>
-          <p>
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/40 pt-8 sm:flex-row">
+          <p className="text-xs text-muted-foreground">
+            &copy; {new Date().getFullYear()} Cortek. All rights reserved.
+          </p>
+          <p className="text-xs text-muted-foreground">
             Built by{" "}
             <a
               href="https://cortek.co"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-foreground transition-colors"
+              className="text-foreground/70 underline transition-colors hover:text-foreground"
             >
               Cortek
             </a>

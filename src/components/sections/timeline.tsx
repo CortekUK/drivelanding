@@ -26,7 +26,7 @@ const STEPS = [
     time: "Ongoing",
     title: "Scale support",
     description:
-      "Platform updates, feature improvements and optional paid traffic management to scale your direct channel.",
+      "Platform updates, feature improvements, retention systems, and optional paid demand activation to scale your direct channel.",
   },
 ];
 
@@ -114,6 +114,11 @@ export function Timeline() {
             </ul>
           </div>
         </div>
+
+        <p className="mt-8 text-center text-xs leading-relaxed text-muted-foreground">
+          Paid acquisition management is optional and runs through your own ad
+          accounts — you retain ownership and data.
+        </p>
       </div>
     </section>
   );

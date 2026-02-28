@@ -5,7 +5,6 @@ import { OperationsDashboard } from "@/components/sections/operations-dashboard"
 import { RenterPortal } from "@/components/sections/renter-portal";
 import { BookingWebsite } from "@/components/sections/booking-website";
 import { Timeline } from "@/components/sections/timeline";
-import { DemandActivation } from "@/components/sections/demand-activation";
 import { FAQSection } from "@/components/sections/faq-section";
 import { CTABand } from "@/components/sections/cta-band";
 
@@ -19,7 +18,6 @@ export default function Home() {
       <RenterPortal />
       <BookingWebsite />
       <Timeline />
-      <DemandActivation />
       <FAQSection />
       <CTABand />
     </>

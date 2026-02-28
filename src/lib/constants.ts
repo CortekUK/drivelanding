@@ -170,7 +170,7 @@ export const FAQ_ITEMS = [
   {
     question: "Do you help with marketing and paid traffic?",
     answer:
-      "Yes. While Drive247 is not a marketplace, we offer optional Meta (Facebook & Instagram) ad management to help drive traffic to your direct booking website. You fund the ad spend, and we manage campaign setup, targeting, and optimisation. Many operators use Drive247 alongside paid acquisition to build a predictable direct channel.",
+      "Drive247 provides the infrastructure to own your bookings. For operators ready to scale, we offer optional paid acquisition management — structured through your own ad accounts, ensuring you retain control and ownership.",
   },
   {
     question: "What about insurance and claims?",

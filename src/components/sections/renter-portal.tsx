@@ -116,10 +116,10 @@ export function RenterPortal() {
         {/* Three-column: features | phone | features */}
         <div
           ref={ref}
-          className={`mt-16 grid items-center gap-10 xl:grid-cols-[1fr_auto_1fr] ${visible ? "fade-in-visible" : "fade-in-hidden"}`}
+          className={`mt-16 grid items-center gap-10 lg:grid-cols-[1fr_auto_1fr] ${visible ? "fade-in-visible" : "fade-in-hidden"}`}
         >
           {/* Left features */}
-          <div className="hidden space-y-10 xl:block">
+          <div className="hidden space-y-10 lg:block">
             {LEFT_FEATURES.map((f) => (
               <FeatureItem key={f.title} {...f} align="left" />
             ))}
@@ -143,14 +143,14 @@ export function RenterPortal() {
           </div>
 
           {/* Right features */}
-          <div className="hidden space-y-10 xl:block">
+          <div className="hidden space-y-10 lg:block">
             {RIGHT_FEATURES.map((f) => (
               <FeatureItem key={f.title} {...f} align="right" />
             ))}
           </div>
 
           {/* Mobile: all features in a grid below the phone */}
-          <div className="grid gap-6 sm:grid-cols-2 xl:hidden">
+          <div className="grid gap-6 sm:grid-cols-2 lg:hidden">
             {[...LEFT_FEATURES, ...RIGHT_FEATURES].map((f) => (
               <FeatureItem key={f.title} {...f} align="right" />
             ))}

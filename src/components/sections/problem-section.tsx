@@ -35,7 +35,7 @@ function ProblemCard({
 
   return (
     <div
-      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.07] p-8 shadow-sm shadow-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:bg-white/[0.09] ${className ?? ""}`}
+      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.07] p-5 sm:p-6 lg:p-8 shadow-sm shadow-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:bg-white/[0.09] ${className ?? ""}`}
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(16px)",
@@ -47,12 +47,12 @@ function ProblemCard({
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
 
       {/* Large number watermark */}
-      <span className="pointer-events-none absolute -bottom-4 right-4 text-[80px] font-extrabold leading-none tabular-nums text-indigo-400/[0.06] transition-colors duration-300 group-hover:text-indigo-400/[0.10]">
+      <span className="pointer-events-none absolute -bottom-4 right-4 text-[56px] sm:text-[80px] font-extrabold leading-none tabular-nums text-indigo-400/[0.06] transition-colors duration-300 group-hover:text-indigo-400/[0.10]">
         {String(index + 1).padStart(2, "0")}
       </span>
 
       <div className="relative">
-        <div className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-400/[0.1]">
+        <div className="mb-4 sm:mb-6 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-400/[0.1]">
           {Icon && <Icon className="h-5 w-5 text-indigo-400" />}
         </div>
 

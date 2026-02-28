@@ -64,7 +64,7 @@ export function Timeline() {
 
         <div
           ref={ref}
-          className={`mt-12 grid items-center gap-16 lg:grid-cols-2 ${visible ? "fade-in-visible" : "fade-in-hidden"}`}
+          className={`mt-12 grid items-center gap-10 lg:gap-16 lg:grid-cols-2 ${visible ? "fade-in-visible" : "fade-in-hidden"}`}
         >
           {/* Left: Vertical stepper */}
           <div className="relative">

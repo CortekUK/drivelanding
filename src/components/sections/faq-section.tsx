@@ -13,7 +13,7 @@ export function FAQSection() {
   const { ref, visible } = useFadeIn();
 
   return (
-    <section id="faq" className="py-20 sm:py-24">
+    <section id="faq" className="bg-muted/30 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-center justify-center gap-4">
           <div className="h-px w-12 bg-border" />

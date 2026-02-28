@@ -127,7 +127,7 @@ export function RenterPortal() {
 
           {/* Phone mockup */}
           <div className="flex justify-center">
-            <div className="w-[280px]">
+            <div className="w-full max-w-[280px]">
               <div className="overflow-hidden rounded-[2.5rem] border-[6px] border-border/50 bg-card shadow-lg">
                 <div className="relative bg-muted/60 px-4 py-2">
                   <div className="mx-auto h-5 w-24 rounded-full bg-foreground/10" />

@@ -10,7 +10,7 @@ export function CTABand() {
   const { ref, visible } = useFadeIn();
 
   return (
-    <section className="relative overflow-hidden pt-18 pb-18 sm:pt-22 sm:pb-22">
+    <section className="relative overflow-hidden py-16 sm:py-20">
       {/* Background — very subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background to-slate-50/60 dark:to-slate-900/10" />
       <div className="absolute inset-x-0 top-0 h-px bg-border" />
@@ -47,7 +47,7 @@ export function CTABand() {
         {/* Reassurance */}
         <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground/80">
           <CheckCircle2 className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
-          <span>Clear next steps. Typical go-live in ~7 days.</span>
+          <span>Clear next steps. We move fast on our side.</span>
         </div>
 
         {/* Divider */}

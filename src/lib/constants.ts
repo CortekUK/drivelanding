@@ -48,47 +48,6 @@ export const PROBLEM_POINTS = [
 ];
 
 
-export const TIMELINE_STEPS = [
-  {
-    time: "Day 0",
-    title: "Kickoff call",
-    description:
-      "We align on your fleet, pricing strategy, branding and growth goals.",
-  },
-  {
-    time: "48 hours",
-    title: "Admin access + branded site",
-    description:
-      "Your dashboard is live and your direct booking website is ready for review.",
-  },
-  {
-    time: "~1 week",
-    title: "Go live and take bookings",
-    description:
-      "Payments, documents and verification are connected. You begin taking direct bookings.",
-  },
-  {
-    time: "Ongoing",
-    title: "Growth support",
-    description:
-      "Platform updates, feature improvements and optional paid traffic management to scale your direct channel.",
-  },
-];
-
-export const IDEAL_FOR = [
-  "Turo power hosts ready to build a direct channel",
-  "Operators scaling beyond marketplace dependency",
-  "Independent fleets building long-term brand equity",
-  "Airport and local rental operators ready to control pricing",
-  "Businesses investing in paid traffic and retention",
-];
-
-export const NOT_IDEAL_FOR = [
-  "Operators who want a marketplace to generate all demand",
-  "Businesses unwilling to manage their own customer acquisition",
-  "Fleets looking for built-in marketplace traffic instead of ownership",
-];
-
 export const DASHBOARD_SLIDES = [
   {
     id: "fleet",
@@ -161,6 +120,39 @@ export const DASHBOARD_SLIDES = [
   },
 ];
 
+export const TESTIMONIALS = [
+  {
+    before: "We went from juggling spreadsheets and three different apps to running everything from one dashboard. We finally have a system that matches how we actually operate. ",
+    bold: "Bookings doubled within the first quarter.",
+    after: "",
+    name: "Marcus T.",
+    initials: "MT",
+    role: "Owner",
+    fleet: "12-vehicle fleet, Atlanta",
+    stars: 5,
+  },
+  {
+    before: "",
+    bold: "The branded website alone paid for itself.",
+    after: " Customers trust us more when they book on our own site instead of a marketplace listing.",
+    name: "Sarah K.",
+    initials: "SK",
+    role: "Operations Manager",
+    fleet: "28-vehicle fleet, Miami",
+    stars: 5,
+  },
+  {
+    before: "Setup was painless — ",
+    bold: "we were live in five days.",
+    after: " The team actually understands what independent operators need.",
+    name: "James R.",
+    initials: "JR",
+    role: "Founder",
+    fleet: "8-vehicle fleet, Phoenix",
+    stars: 5,
+  },
+];
+
 export const FAQ_ITEMS = [
   {
     question: "Do you generate demand like Turo?",
@@ -191,5 +183,10 @@ export const FAQ_ITEMS = [
     question: "Do I own my data and can I leave anytime?",
     answer:
       "Drive247 is a SaaS platform — you subscribe and use it, but the code isn't yours to take. However, your data is always yours. You can export customer data, booking history, and documents at any time. No lock-in tricks.",
+  },
+  {
+    question: "How much does Drive247 cost?",
+    answer:
+      "Pricing depends on fleet size and which modules you need. We'll walk through options on your strategy call and give you a clear breakdown — no hidden fees, no long-term contracts.",
   },
 ];

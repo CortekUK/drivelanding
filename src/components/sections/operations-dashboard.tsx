@@ -48,7 +48,7 @@ export function OperationsDashboard() {
                   <div className="h-3 w-3 rounded-full bg-yellow-400/80" />
                   <div className="h-3 w-3 rounded-full bg-green-400/80" />
                 </div>
-                <div className="mx-auto flex h-6 w-64 items-center justify-center rounded-md bg-background px-3">
+                <div className="mx-auto flex h-6 w-40 sm:w-64 items-center justify-center rounded-md bg-background px-3">
                   <span className="text-[11px] text-muted-foreground">
                     admin.drive247.com
                   </span>

@@ -1,12 +1,11 @@
 "use client";
 
-import { Globe, CheckCircle2 } from "lucide-react";
 import { useFadeIn } from "@/hooks/use-fade-in";
 
 const BULLETS = [
   "Your domain and branding",
   "Real-time availability synced with your dashboard",
-  "Conversion-optimised booking flow",
+  "Guided booking flow with insurance and ID at checkout",
   "Built to support paid traffic campaigns",
 ];
 
@@ -46,8 +45,31 @@ export function BookingWebsite() {
           <div className="absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-indigo-600/20 to-transparent" />
 
           <div className="grid items-center lg:grid-cols-5">
-            {/* Browser mockup with video */}
-            <div className="p-6 pb-0 lg:col-span-3 lg:p-8 lg:pb-8">
+            {/* Text content — left on desktop, below video on mobile */}
+            <div className="order-2 p-6 lg:order-1 lg:col-span-2 lg:p-8">
+              <p className="text-muted-foreground leading-relaxed">
+                Your website. Your pricing. Your rules.
+              </p>
+
+              <ul className="mt-6 space-y-2">
+                {BULLETS.map((bullet) => (
+                  <li
+                    key={bullet}
+                    className="flex items-start gap-3 rounded-lg bg-muted/50 px-3 py-2.5"
+                  >
+                    <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+                    <p className="text-sm font-medium">{bullet}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
+                Connected directly to your back office — no fragmented tools.
+              </p>
+            </div>
+
+            {/* Browser mockup with video — right on desktop, first on mobile */}
+            <div className="order-1 p-4 pb-0 sm:p-6 sm:pb-0 lg:order-2 lg:col-span-3 lg:p-8 lg:pb-8">
               <div className="overflow-hidden rounded-xl border border-border/50 bg-muted/30 shadow-lg">
                 <div className="flex items-center gap-2 border-b bg-muted/60 px-4 py-3">
                   <div className="flex gap-1.5">
@@ -55,7 +77,7 @@ export function BookingWebsite() {
                     <div className="h-3 w-3 rounded-full bg-yellow-400/80" />
                     <div className="h-3 w-3 rounded-full bg-green-400/80" />
                   </div>
-                  <div className="mx-auto flex h-6 w-64 items-center justify-center rounded-md bg-background px-3">
+                  <div className="mx-auto flex h-6 w-40 sm:w-64 items-center justify-center rounded-md bg-background px-3">
                     <span className="text-[11px] text-muted-foreground">
                       yourbrand.com
                     </span>
@@ -66,29 +88,6 @@ export function BookingWebsite() {
                   <source src="/drivewebsite.mp4" type="video/mp4" />
                 </video>
               </div>
-            </div>
-
-            {/* Text content */}
-            <div className="p-6 lg:col-span-2 lg:p-8">
-              <p className="text-muted-foreground leading-relaxed">
-                Your website. Your pricing. Your rules.
-              </p>
-
-              <ul className="mt-6 space-y-2">
-                {BULLETS.map((bullet) => (
-                  <li
-                    key={bullet}
-                    className="flex items-center gap-3 rounded-lg bg-muted/50 px-3 py-2.5"
-                  >
-                    <CheckCircle2 className="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400" />
-                    <p className="text-sm font-medium">{bullet}</p>
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
-                Connected directly to your back office — no fragmented tools.
-              </p>
             </div>
           </div>
         </div>

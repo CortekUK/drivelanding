@@ -8,7 +8,7 @@ function DashboardPreview() {
   return (
     <div className="relative mx-auto w-full max-w-xl lg:mx-0">
       <div className="relative max-w-2xl lg:mx-0">
-        <div className="mr-16 overflow-hidden rounded-xl border bg-background shadow-2xl shadow-indigo-900/10 sm:mr-20">
+        <div className="mr-8 overflow-hidden rounded-xl border bg-background shadow-2xl shadow-indigo-900/10 sm:mr-16 lg:mr-20">
           <Image
             src="/dashboard-preview-v3.png"
             alt="Drive247 operations dashboard showing revenue tracking and performance analytics"
@@ -18,7 +18,7 @@ function DashboardPreview() {
             priority
           />
         </div>
-        <div className="-mt-12 ml-8 mr-8 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 opacity-90 sm:-mt-20 sm:ml-10 sm:mr-10">
+        <div className="-mt-8 ml-4 mr-4 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 opacity-90 sm:-mt-12 sm:ml-8 sm:mr-8 lg:-mt-20 lg:ml-10 lg:mr-10">
           <Image
             src="/renter-portal-preview.png"
             alt="Drive247 renter portal showing bookings, payments, ID verification, and messaging"
@@ -27,7 +27,7 @@ function DashboardPreview() {
             className="w-full"
           />
         </div>
-        <div className="-mt-12 ml-16 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 opacity-85 sm:-mt-20 sm:ml-20">
+        <div className="-mt-8 ml-8 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 opacity-85 sm:-mt-12 sm:ml-16 lg:-mt-20 lg:ml-20">
           <Image
             src="/booking-preview.png"
             alt="Drive247 branded booking flow showing trip details, vehicle selection, and insurance steps"
@@ -104,10 +104,6 @@ export function Hero() {
                 )
               )}
             </div>
-
-            <p className="mt-4 text-xs text-muted-foreground/60">
-              Built for established US rental operators (5–50 vehicle fleets).
-            </p>
           </div>
 
           {/* Right — product mockup */}

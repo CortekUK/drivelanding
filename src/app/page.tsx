@@ -4,6 +4,7 @@ import { ProblemSection } from "@/components/sections/problem-section";
 import { OperationsDashboard } from "@/components/sections/operations-dashboard";
 import { RenterPortal } from "@/components/sections/renter-portal";
 import { BookingWebsite } from "@/components/sections/booking-website";
+import { SocialProof } from "@/components/sections/social-proof";
 import { Timeline } from "@/components/sections/timeline";
 import { FAQSection } from "@/components/sections/faq-section";
 import { CTABand } from "@/components/sections/cta-band";
@@ -17,6 +18,7 @@ export default function Home() {
       <OperationsDashboard />
       <RenterPortal />
       <BookingWebsite />
+      <SocialProof />
       <Timeline />
       <FAQSection />
       <CTABand />

@@ -87,20 +87,20 @@ export function OperationsDashboard() {
           ref={tabsRow.ref}
           className={tabsRow.visible ? "fade-in-visible" : "fade-in-hidden"}
         >
-          <Tabs defaultValue="fleet" className="mt-12">
+          <Tabs defaultValue="fleet" className="mt-6 sm:mt-12">
             <TabsList
               variant="line"
-              className="mx-auto flex w-full flex-wrap justify-center gap-2 bg-transparent sm:flex-nowrap"
+              className="mx-auto grid h-auto w-full grid-cols-2 gap-2 bg-transparent sm:flex sm:flex-wrap sm:justify-center"
             >
               {DASHBOARD_SLIDES.map((slide) => (
-                <TabsTrigger
-                  key={slide.id}
-                  value={slide.id}
-                  className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-muted-foreground transition-all after:hidden data-[state=active]:border-indigo-600/30 data-[state=active]:bg-indigo-600/[0.08] data-[state=active]:text-indigo-600 dark:data-[state=active]:border-indigo-400/30 dark:data-[state=active]:bg-indigo-400/[0.08] dark:data-[state=active]:text-indigo-400"
-                >
-                  {slide.trigger}
-                </TabsTrigger>
-              ))}
+                  <TabsTrigger
+                    key={slide.id}
+                    value={slide.id}
+                    className="whitespace-nowrap rounded-full border border-border/60 bg-background px-3 py-1.5 text-xs font-medium text-muted-foreground transition-all after:hidden last:col-span-2 last:mx-auto last:w-3/4 data-[state=active]:border-indigo-600/30 data-[state=active]:bg-indigo-600/[0.08] data-[state=active]:text-indigo-600 sm:px-4 sm:py-2 sm:text-sm sm:last:col-span-1 sm:last:w-auto dark:border-neutral-700 dark:data-[state=active]:border-indigo-400/50 dark:data-[state=active]:bg-indigo-400/[0.08] dark:data-[state=active]:text-indigo-400"
+                  >
+                    {slide.trigger}
+                  </TabsTrigger>
+                ))}
             </TabsList>
 
             {DASHBOARD_SLIDES.map((slide) => (

@@ -128,14 +128,17 @@ export function RenterPortal() {
           {/* Phone mockup */}
           <div className="flex justify-center">
             <div className="w-full max-w-[280px]">
-              <div className="overflow-hidden rounded-[2.5rem] border-[6px] border-border/50 bg-card shadow-lg">
+              <div className="overflow-hidden rounded-[2.5rem] border-[6px] border-border/50 bg-card shadow-lg dark:border-neutral-800 dark:bg-black">
                 <div className="relative bg-muted/60 px-4 py-2">
                   <div className="mx-auto h-5 w-24 rounded-full bg-foreground/10" />
                 </div>
-                <video autoPlay loop muted playsInline className="w-full">
-                  <source src="/drivemobile2.mp4" type="video/mp4" />
+                <video autoPlay loop muted playsInline className="block w-full -mt-px dark:hidden" onLoadedMetadata={(e) => { e.currentTarget.playbackRate = 2; }}>
+                  <source src="/renter-portal-video-v2.mp4" type="video/mp4" />
                 </video>
-                <div className="bg-muted/60 px-4 py-3">
+                <video autoPlay loop muted playsInline className="hidden w-full -mt-px dark:block" onLoadedMetadata={(e) => { e.currentTarget.playbackRate = 2; }}>
+                  <source src="/renter-portal-video-v2-dark3.mp4" type="video/mp4" />
+                </video>
+                <div className="relative z-10 -mt-px bg-muted/60 px-4 py-3">
                   <div className="mx-auto h-1 w-28 rounded-full bg-foreground/15" />
                 </div>
               </div>

@@ -55,8 +55,11 @@ export function OperationsDashboard() {
                 </div>
                 <div className="w-[52px]" />
               </div>
-              <video autoPlay loop muted playsInline className="w-full">
+              <video autoPlay loop muted playsInline className="w-full dark:hidden">
                 <source src="/dashboard-video-v2.mp4" type="video/mp4" />
+              </video>
+              <video autoPlay loop muted playsInline className="hidden w-full dark:block">
+                <source src="/dashboard-video-v2-dark.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -114,23 +117,47 @@ export function OperationsDashboard() {
                     {/* Screenshot or video */}
                     <div className="overflow-hidden rounded-xl border border-border/50 bg-muted/30">
                       {"video" in slide && slide.video ? (
-                        <video
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className="w-full"
-                          onLoadedMetadata={(e) => {
-                            e.currentTarget.currentTime = 5;
-                          }}
-                          onTimeUpdate={(e) => {
-                            const v = e.currentTarget;
-                            if (v.currentTime < 5) v.currentTime = 5;
-                            v.playbackRate = v.currentTime >= 15 ? 2 : 1;
-                          }}
-                        >
-                          <source src={slide.video} type="video/mp4" />
-                        </video>
+                        "videoDark" in slide && slide.videoDark ? (
+                          <>
+                            <video
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="w-full dark:hidden"
+                              onLoadedMetadata={(e) => {
+                                e.currentTarget.playbackRate = 2;
+                              }}
+                            >
+                              <source src={slide.video} type="video/mp4" />
+                            </video>
+                            <video
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="hidden w-full dark:block"
+                              onLoadedMetadata={(e) => {
+                                e.currentTarget.playbackRate = 2;
+                              }}
+                            >
+                              <source src={slide.videoDark} type="video/mp4" />
+                            </video>
+                          </>
+                        ) : (
+                          <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full"
+                            onLoadedMetadata={(e) => {
+                              e.currentTarget.playbackRate = 2;
+                            }}
+                          >
+                            <source src={slide.video} type="video/mp4" />
+                          </video>
+                        )
                       ) : slide.image.startsWith("/placeholder") ? (
                         <div className="flex aspect-[4/3] items-center justify-center text-muted-foreground">
                           <div className="text-center">

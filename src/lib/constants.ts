@@ -60,7 +60,8 @@ export const DASHBOARD_SLIDES = [
       "Add and manage vehicles with photos, pricing, and rules",
       "Location and working-hour configuration",
     ],
-    image: "/fleet-management.png",
+    image: "/fleet-management-v3.png",
+    imageDark: "/fleet-management-v3-dark.png",
   },
   {
     id: "bookings",
@@ -73,7 +74,8 @@ export const DASHBOARD_SLIDES = [
       "Booking timeline with full renter activity history",
       "Direct renter communication inside the booking",
     ],
-    image: "/bookings-management.png",
+    image: "/bookings-management-v2.png",
+    imageDark: "/bookings-management-v2-dark.png",
   },
   {
     id: "payments",
@@ -86,7 +88,8 @@ export const DASHBOARD_SLIDES = [
       "Upload and verify renter documents",
       "Store agreements and booking files securely",
     ],
-    image: "/payments-management.png",
+    image: "/payments-management-v2.png",
+    imageDark: "/payments-management-v2-dark.png",
   },
   {
     id: "revenue",
@@ -99,7 +102,8 @@ export const DASHBOARD_SLIDES = [
       "P&L visibility across the fleet",
       "Downloadable reporting",
     ],
-    image: "/revenue-analytics.png",
+    image: "/revenue-analytics-v2.png",
+    imageDark: "/revenue-analytics-v2-dark.png",
   },
   {
     id: "ai",

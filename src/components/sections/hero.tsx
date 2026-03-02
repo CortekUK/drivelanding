@@ -10,30 +10,52 @@ function DashboardPreview() {
       <div className="relative max-w-2xl lg:mx-0">
         <div className="mr-8 overflow-hidden rounded-xl border bg-background shadow-2xl shadow-indigo-900/10 sm:mr-16 lg:mr-20">
           <Image
-            src="/dashboard-preview-v3.png"
+            src="/dashboard-preview-v5.png"
             alt="Drive247 operations dashboard showing revenue tracking and performance analytics"
             width={1440}
             height={828}
-            className="w-full"
+            className="w-full dark:hidden"
+            priority
+          />
+          <Image
+            src="/dashboard-preview-v5-dark.png"
+            alt="Drive247 operations dashboard showing revenue tracking and performance analytics"
+            width={1440}
+            height={828}
+            className="hidden w-full dark:block"
             priority
           />
         </div>
         <div className="-mt-8 ml-4 mr-4 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 opacity-90 sm:-mt-12 sm:ml-8 sm:mr-8 lg:-mt-20 lg:ml-10 lg:mr-10">
           <Image
-            src="/renter-portal-preview.png"
+            src="/renter-portal-preview-v3.png"
             alt="Drive247 renter portal showing bookings, payments, ID verification, and messaging"
             width={1440}
             height={828}
-            className="w-full"
+            className="w-full dark:hidden"
+          />
+          <Image
+            src="/renter-portal-preview-v3-dark.png"
+            alt="Drive247 renter portal showing bookings, payments, ID verification, and messaging"
+            width={1440}
+            height={828}
+            className="hidden w-full dark:block"
           />
         </div>
         <div className="-mt-8 ml-8 overflow-hidden rounded-xl border bg-background shadow-xl shadow-indigo-900/10 opacity-85 sm:-mt-12 sm:ml-16 lg:-mt-20 lg:ml-20">
           <Image
-            src="/booking-preview.png"
+            src="/booking-preview-v4.png"
             alt="Drive247 branded booking flow showing trip details, vehicle selection, and insurance steps"
             width={1440}
             height={828}
-            className="w-full"
+            className="w-full dark:hidden"
+          />
+          <Image
+            src="/booking-preview-v4-dark.png"
+            alt="Drive247 branded booking flow showing trip details, vehicle selection, and insurance steps"
+            width={1440}
+            height={828}
+            className="hidden w-full dark:block"
           />
         </div>
       </div>

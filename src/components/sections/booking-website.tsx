@@ -13,7 +13,7 @@ export function BookingWebsite() {
   const { ref, visible } = useFadeIn();
 
   return (
-    <section className="bg-muted/50 py-20 sm:py-24">
+    <section id="features-booking" className="bg-muted/50 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section heading */}
         <div className="flex items-center justify-center gap-4">
@@ -79,13 +79,16 @@ export function BookingWebsite() {
                   </div>
                   <div className="mx-auto flex h-6 w-40 sm:w-64 items-center justify-center rounded-md bg-background px-3">
                     <span className="text-[11px] text-muted-foreground">
-                      yourbrand.com
+                      website.drive247.com
                     </span>
                   </div>
                   <div className="w-[52px]" />
                 </div>
-                <video autoPlay loop muted playsInline className="w-full">
-                  <source src="/drivewebsite.mp4" type="video/mp4" />
+                <video autoPlay loop muted playsInline className="w-full dark:hidden">
+                  <source src="/drivewebsite-v2.mp4" type="video/mp4" />
+                </video>
+                <video autoPlay loop muted playsInline className="hidden w-full dark:block">
+                  <source src="/drivewebsite-v2-dark.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>

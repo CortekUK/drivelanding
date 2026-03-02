@@ -89,7 +89,7 @@ export function RenterPortal() {
   const { ref, visible } = useFadeIn();
 
   return (
-    <section className="py-20 sm:py-24">
+    <section id="features-renter" className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section heading */}
         <div className="flex items-center justify-center gap-4">

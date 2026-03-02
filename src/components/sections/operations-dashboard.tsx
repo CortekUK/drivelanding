@@ -56,7 +56,7 @@ export function OperationsDashboard() {
                 <div className="w-[52px]" />
               </div>
               <video autoPlay loop muted playsInline className="w-full">
-                <source src="/drivesuper2.mp4" type="video/mp4" />
+                <source src="/dashboard-video-v2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -143,6 +143,25 @@ export function OperationsDashboard() {
                             </p>
                           </div>
                         </div>
+                      ) : "imageDark" in slide && slide.imageDark ? (
+                        <>
+                          <Image
+                            src={slide.image}
+                            alt={slide.title}
+                            width={1917}
+                            height={992}
+                            quality={100}
+                            className="w-full dark:hidden"
+                          />
+                          <Image
+                            src={slide.imageDark}
+                            alt={slide.title}
+                            width={1917}
+                            height={992}
+                            quality={100}
+                            className="hidden w-full dark:block"
+                          />
+                        </>
                       ) : (
                         <Image
                           src={slide.image}

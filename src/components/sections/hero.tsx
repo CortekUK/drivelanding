@@ -110,7 +110,7 @@ export function Hero() {
                 className="text-sm font-normal"
                 asChild
               >
-                <a href="#features">See the platform</a>
+                <a href="#features">See how it works</a>
               </Button>
             </div>
 

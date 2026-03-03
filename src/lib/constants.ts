@@ -37,13 +37,13 @@ export const PROBLEM_POINTS = [
     icon: "ShieldAlert",
     title: "Policy and algorithm changes",
     description:
-      "Visibility, pricing, and compliance can shift without your input.",
+      "Marketplace rules, pricing limits, and search rankings can shift overnight — without your input or consent.",
   },
   {
     icon: "TrendingDown",
     title: "Traffic concentration risk",
     description:
-      "Relying on one marketplace centralises demand risk in a single channel.",
+      "One algorithm change can cut your visibility overnight. Relying on a single channel puts your entire business at risk.",
   },
 ];
 
@@ -107,18 +107,17 @@ export const DASHBOARD_SLIDES = [
   },
   {
     id: "ai",
-    trigger: "AI Copilot (Powered by TraX)",
+    trigger: "AI Copilot",
     title: "AI Copilot",
     description:
-      "Operational summaries and intelligent prompts — directly inside your dashboard.",
-    body: "Drive247's AI Copilot analyses live booking, revenue, and fleet data — delivering concise operational summaries and on-demand insights inside your dashboard.",
+      "Ask your dashboard anything — revenue trends, occupancy gaps, booking anomalies — and get answers in plain English.",
+    body: "Drive247's AI Copilot analyses live booking, revenue, and fleet data to surface what matters. No more digging through reports — just ask.",
     bullets: [
-      "Real-time revenue and utilisation summaries",
-      "Automated booking and operational highlights",
-      "Intelligent alerts for anomalies or trends",
-      "Natural-language queries across your rental data",
+      "\"What was my utilisation last week?\" — instant answers",
+      "Automated daily revenue and booking summaries",
+      "Intelligent alerts when trends or anomalies appear",
+      "Natural-language queries across all your rental data",
     ],
-    footnote: "Powered by TraX AI.",
     image: "/og.png",
     video: "/ai-copilot-video-v2.mp4",
     videoDark: "/ai-copilot-video-v2-dark.mp4",

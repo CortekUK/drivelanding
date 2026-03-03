@@ -6,7 +6,7 @@ const BULLETS = [
   "Your domain and branding",
   "Real-time availability synced with your dashboard",
   "Guided booking flow with insurance and ID at checkout",
-  "Built to support paid traffic campaigns",
+  "Run your own Google and Meta campaigns — keep 100% of customers",
 ];
 
 export function BookingWebsite() {

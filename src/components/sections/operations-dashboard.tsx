@@ -30,8 +30,8 @@ export function OperationsDashboard() {
         </h2>
 
         <p className="mx-auto mt-3 max-w-xl text-center leading-relaxed text-muted-foreground">
-          Fleet, bookings, payments and analytics — unified in one system built
-          for independent rental operators.
+          Fleet, bookings, payments and analytics — unified in one system.
+          No more switching between spreadsheets, payment platforms, and messaging apps.
         </p>
 
         {/* Video row */}
@@ -225,11 +225,6 @@ export function OperationsDashboard() {
                           </li>
                         ))}
                       </ul>
-                      {"footnote" in slide && slide.footnote && (
-                        <p className="mt-4 text-xs text-muted-foreground/60">
-                          {slide.footnote}
-                        </p>
-                      )}
                     </div>
                   </div>
                 </div>

@@ -108,9 +108,8 @@ export function RenterPortal() {
         </h2>
 
         <p className="mx-auto mt-3 max-w-xl text-center leading-relaxed text-muted-foreground">
-          Everything renters need — no app required.
-          <br />
-          Accessible instantly from any device.
+          No app download. No back-and-forth texting. Just a secure link
+          that gives renters everything they need from any device.
         </p>
 
         {/* Three-column: features | phone | features */}

@@ -22,23 +22,26 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Drive247",
     type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Drive247 — Direct Booking Platform" }],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_META.title,
     description: SITE_META.description,
+    images: ["/og.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
 const organizationLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Cortek",
-  url: "https://cortek.co",
-  brand: {
-    "@type": "Brand",
-    name: "Drive247",
-  },
+  name: "Drive247",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo-light.png`,
 };
 
 const softwareLd = {
@@ -67,8 +70,14 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring"
+          >
+            Skip to content
+          </a>
           <Header />
-          <main className="min-h-[calc(100vh-4rem)]">{children}</main>
+          <main id="main" className="min-h-[calc(100vh-4rem)]">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

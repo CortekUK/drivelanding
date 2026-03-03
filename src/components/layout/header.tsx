@@ -94,6 +94,8 @@ export function Header() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
           >
             {mobileOpen ? (
               <X className="h-5 w-5" />
@@ -106,6 +108,7 @@ export function Header() {
 
       {/* Change 1: Animated mobile nav */}
       <nav
+        id="mobile-nav"
         className={`overflow-hidden transition-all duration-300 ease-out md:hidden ${
           mobileOpen
             ? "max-h-96 border-t border-border/40 opacity-100"

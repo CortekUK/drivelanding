@@ -33,7 +33,7 @@ export function LeadCaptureForm() {
         {isPending ? "Sending..." : "Get updates"}
       </Button>
       {state && !state.success && (
-        <p className="text-sm text-red-600 sm:hidden">{state.message}</p>
+        <p className="text-sm text-red-600">{state.message}</p>
       )}
     </form>
   );

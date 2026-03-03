@@ -28,7 +28,8 @@ export async function captureLeadAction(
     .insert({ email: trimmed });
 
   if (error) {
-    console.error("Lead capture error:", error);
+    // Log server-side only in development
+    if (process.env.NODE_ENV === "development") console.error("Lead capture error:", error);
     return { success: false, message: "Something went wrong. Please try again." };
   }
 
@@ -70,7 +71,7 @@ export async function captureConsultationAction(
   });
 
   if (error) {
-    console.error("Consultation capture error:", error);
+    if (process.env.NODE_ENV === "development") console.error("Consultation capture error:", error);
     return { success: false, message: "Something went wrong. Please try again." };
   }
 

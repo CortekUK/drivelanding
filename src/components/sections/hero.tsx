@@ -119,7 +119,7 @@ export function Hero() {
                 (item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-indigo-200/40 bg-indigo-50/30 px-3 py-1 text-xs font-medium text-indigo-600/50 dark:border-indigo-800/25 dark:bg-indigo-950/25 dark:text-indigo-400/50"
+                    className="rounded-full border border-indigo-200/40 bg-indigo-50/30 px-3 py-1 text-xs font-medium text-indigo-600/80 dark:border-indigo-800/25 dark:bg-indigo-950/25 dark:text-indigo-400/80"
                   >
                     {item}
                   </span>

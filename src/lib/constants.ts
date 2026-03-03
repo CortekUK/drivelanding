@@ -119,7 +119,7 @@ export const DASHBOARD_SLIDES = [
       "Natural-language queries across your rental data",
     ],
     footnote: "Powered by TraX AI.",
-    image: "/placeholder-ai.png",
+    image: "/og.png",
     video: "/ai-copilot-video-v2.mp4",
     videoDark: "/ai-copilot-video-v2-dark.mp4",
   },

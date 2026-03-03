@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CALENDLY_URL } from "@/lib/constants";
 
 export function Footer() {
@@ -8,9 +9,21 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="text-xl font-bold tracking-tight">
-              Drive
-              <span className="text-indigo-600 dark:text-indigo-400">247</span>
+            <Link href="/">
+              <Image
+                src="/logo-light.png"
+                alt="Drive247"
+                width={855}
+                height={195}
+                className="h-7 w-auto dark:hidden"
+              />
+              <Image
+                src="/logo-dark.png"
+                alt="Drive247"
+                width={855}
+                height={195}
+                className="hidden h-7 w-auto dark:block"
+              />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-muted-foreground leading-relaxed">
               Direct booking platform for independent rental operators.

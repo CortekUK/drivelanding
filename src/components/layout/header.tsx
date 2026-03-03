@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
@@ -30,9 +31,23 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          Drive
-          <span className="text-indigo-600 dark:text-indigo-400">247</span>
+        <Link href="/">
+          <Image
+            src="/logo-light.png"
+            alt="Drive247"
+            width={855}
+            height={195}
+            className="h-7 w-auto dark:hidden"
+            priority
+          />
+          <Image
+            src="/logo-dark.png"
+            alt="Drive247"
+            width={855}
+            height={195}
+            className="hidden h-7 w-auto dark:block"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -73,18 +88,20 @@ export function Header() {
           </Button>
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-        >
-          {mobileOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
-        </button>
+        {/* Mobile controls */}
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Change 1: Animated mobile nav */}
@@ -118,10 +135,6 @@ export function Header() {
               </a>
             );
           })}
-          {/* Change 3: ThemeToggle on mobile */}
-          <div className="py-2.5">
-            <ThemeToggle />
-          </div>
           {/* Change 4: CTA button glow (mobile) */}
           <Button
             asChild

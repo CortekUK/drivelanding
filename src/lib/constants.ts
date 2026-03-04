@@ -11,6 +11,7 @@ export const SITE_META = {
 export const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "How it works", href: "#timeline" },
+  { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -191,6 +192,57 @@ export const FAQ_ITEMS = [
   {
     question: "How much does Drive247 cost?",
     answer:
-      "Pricing depends on fleet size and which modules you need. We'll walk through options on your strategy call and give you a clear breakdown — no hidden fees, no long-term contracts.",
+      "Plans start at $200/mo for small fleets and scale with your vehicle count. Every plan includes a one-time $2,500 onboarding fee. See the pricing section above for a full breakdown — no hidden fees, no long-term contracts.",
+  },
+];
+
+export const PRICING_TIERS = [
+  {
+    name: "Pilot",
+    price: 200,
+    setupFee: 2500,
+    vehicleLimit: "Up to 10 vehicles",
+    popular: false,
+    features: [
+      "Full fleet management & tracking",
+      "Online booking & payments",
+      "Customer management & verification",
+      "Automated invoicing & reminders",
+      "Real-time customer chat",
+      "Reports & P&L dashboard",
+      "Stripe payment processing",
+      "Insurance integrations (Bonzah)",
+    ],
+  },
+  {
+    name: "Growth",
+    price: 350,
+    setupFee: 2500,
+    vehicleLimit: "Up to 20 vehicles",
+    popular: true,
+    features: [
+      "Everything in Pilot",
+      "Multi-user access with roles",
+      "Founder onboarding",
+      "Fully custom branding",
+      "Done for you uploads",
+      "Website & content management",
+      "Verification Partner Access (Paid)",
+    ],
+  },
+  {
+    name: "Enterprise",
+    price: 650,
+    setupFee: 2500,
+    vehicleLimit: "Unlimited vehicles",
+    popular: false,
+    features: [
+      "Everything in Growth",
+      "Unlimited vehicles",
+      "Priority support",
+      "Dedicated account manager",
+      "Custom feature requests",
+      "Personalised for your business",
+    ],
   },
 ];

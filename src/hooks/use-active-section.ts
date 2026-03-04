@@ -8,11 +8,12 @@ const SECTION_MAP: Record<string, string> = {
   "features-renter": "features",
   "features-booking": "features",
   timeline: "timeline",
+  pricing: "pricing",
   faq: "faq",
 };
 
 // Nav link priority order (first visible in this order wins)
-const NAV_ORDER = ["features", "timeline", "faq"];
+const NAV_ORDER = ["features", "timeline", "pricing", "faq"];
 
 export function useActiveSection() {
   const [activeId, setActiveId] = useState<string | null>(null);

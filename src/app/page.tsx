@@ -7,6 +7,7 @@ import { BookingWebsite } from "@/components/sections/booking-website";
 import { SocialProof } from "@/components/sections/social-proof";
 import { Timeline } from "@/components/sections/timeline";
 import { FAQSection } from "@/components/sections/faq-section";
+import { PricingSection } from "@/components/sections/pricing";
 import { CTABand } from "@/components/sections/cta-band";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <BookingWebsite />
       <SocialProof />
       <Timeline />
+      <PricingSection />
       <FAQSection />
       <CTABand />
     </>

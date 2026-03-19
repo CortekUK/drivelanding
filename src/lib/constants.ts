@@ -218,7 +218,7 @@ export const PRICING_TIERS = [
     name: "Growth",
     price: 350,
     setupFee: 2500,
-    vehicleLimit: "Up to 20 vehicles",
+    vehicleLimit: "Up to 40 vehicles",
     popular: true,
     features: [
       "Everything in Pilot",
@@ -227,6 +227,7 @@ export const PRICING_TIERS = [
       "Fully custom branding",
       "Done for you uploads",
       "Website & content management",
+      "Growth strategy onboarding & support",
       "Verification Partner Access (Paid)",
     ],
   },

@@ -61,7 +61,7 @@ export function PricingSection() {
                   Book a strategy call
                 </a>
                 <span className="text-sm text-muted-foreground">
-                  30 min · free
+                  1 hr · free
                 </span>
               </div>
             </div>
